@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><title>3D Price Surfaces</title>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<style>
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
+select { margin: 5px 10px; font-size: 14px; }
+h2 { margin: 5px 10px; font-size: 16px; }
+iframe { width: 100%; height: calc(100% - 40px); border: none; display: block; }
+</style></head><body>
+<h2>Select Variable</h2>
+<select onchange="document.getElementById('plotframe').src = this.value;">
+<option value="price_speed.html">Price per Mbps</option>
+<option value="subsidy_speed.html">Subsidy per Mbps</option>
+<option value="oop_speed.html">OOP per Mbps</option>
+<option value="lprice.html">Ln(price)</option>
+<option value="lsubsidy.html">Ln(subsidy)</option>
+<option value="loop.html">Ln(OOP)</option>
+<option value="lspeed.html">Ln(speed)</option>
+<option value="lrequests.html">Ln(requests)</option>
+</select>
+<iframe id="plotframe" src="price_speed.html"></iframe>
+</body></html>
