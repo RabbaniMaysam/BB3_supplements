@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html><head><title>3D Price Surfaces</title>
-<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
-<style>
-html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
-select { margin: 5px 10px; font-size: 14px; }
-h2 { margin: 5px 10px; font-size: 16px; }
-iframe { width: 100%; height: calc(100% - 40px); border: none; display: block; }
-</style></head><body>
-<h2>Select Variable</h2>
-<select onchange="document.getElementById('plotframe').src = this.value;">
-<option value="price_speed.html">Price per Mbps</option>
-<option value="subsidy_speed.html">Subsidy per Mbps</option>
-<option value="oop_speed.html">OOP per Mbps</option>
-<option value="lprice.html">Ln(price)</option>
-<option value="lsubsidy.html">Ln(subsidy)</option>
-<option value="loop.html">Ln(OOP)</option>
-<option value="lspeed.html">Ln(speed)</option>
-<option value="lrequests.html">Ln(requests)</option>
-</select>
-<iframe id="plotframe" src="price_speed.html"></iframe>
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>3D Price Surfaces</title>
+<style>html,body{margin:0;padding:0;height:100%;font-family:sans-serif}
+  .topbar{display:flex;align-items:center;gap:12px;padding:6px 20px;background:#4a4a8a;height:40px}
+  .topbar a{color:#fff;background:#37376a;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:14px}
+  .topbar a:hover{background:#2c2c5a}
+  .topbar select{font-size:14px;padding:4px 8px;border:none;border-radius:6px}
+  iframe{width:100%;height:calc(100vh - 40px);border:none;display:block}</style></head><body>
+<div class='topbar'><a href='../index.html'>&larr; Back</a><select onchange="document.getElementById('plotframe').src=this.value">
+<option value='price_speed.html'>Price per Mbps</option>
+<option value='subsidy_speed.html'>Subsidy per Mbps</option>
+<option value='oop_speed.html'>OOP per Mbps</option>
+<option value='lprice.html'>Ln(price)</option>
+<option value='lsubsidy.html'>Ln(subsidy)</option>
+<option value='loop.html'>Ln(OOP)</option>
+<option value='lspeed.html'>Ln(speed)</option>
+<option value='lrequests.html'>Ln(requests)</option>
+</select></div>
+<iframe id='plotframe' src='price_speed.html'></iframe>
 </body></html>
